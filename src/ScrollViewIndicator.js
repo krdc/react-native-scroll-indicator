@@ -112,6 +112,7 @@ export default ({
             </ScrollView>
             {!isContentSmallerThanScrollView && (
                 <Animated.View
+                    pointerEvents={'none'}
                     style={[
                         styles.scrollIndicatorContainer,
                         { opacity: fadeAnim },
