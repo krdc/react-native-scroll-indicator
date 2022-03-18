@@ -61,10 +61,12 @@ export default ({
                 ? Animated.timing(fadeAnim, {
                       toValue: 0,
                       duration: hideTimeout,
+                      useNativeDriver: true
                   }).start()
                 : Animated.timing(fadeAnim, {
                       toValue: 1,
                       duration: hideTimeout,
+                      useNativeDriver: true
                   }).start();
         }
     }, [fadeAnim, hideTimeout, isIndicatorHidden, shouldIndicatorHide]);
