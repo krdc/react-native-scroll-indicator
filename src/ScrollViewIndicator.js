@@ -73,7 +73,7 @@ export default ({
 
     useEffect(() => {
 
-        const newHeight = visibleScrollPartHeight *
+        let newHeight = visibleScrollPartHeight *
             (visibleScrollPartHeight / fullSizeContentHeight);
 
         if (newHeight < 10) {
