@@ -72,11 +72,17 @@ export default ({
     }, [fadeAnim, hideTimeout, isIndicatorHidden, shouldIndicatorHide]);
 
     useEffect(() => {
+
+        const newHeight = visibleScrollPartHeight *
+            (visibleScrollPartHeight / fullSizeContentHeight);
+
+        if (newHeight < 10) {
+            newHeight = 0;
+        }
         //Change indicator height effect
         flexibleIndicator &&
             setIndicatorFlexibleHeight(
-                visibleScrollPartHeight *
-                    (visibleScrollPartHeight / fullSizeContentHeight),
+                newHeight
             );
     }, [visibleScrollPartHeight, fullSizeContentHeight, flexibleIndicator]);
 
